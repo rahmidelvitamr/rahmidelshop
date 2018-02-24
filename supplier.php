@@ -8,8 +8,8 @@
 				<div class="table-container table-navigation">
 					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"
 						style="display: flex;">
-						<h2 id="invoice-title" style="display: inline-block">Transaksi
-							Pembelian</h2>
+						<h2 id="invoice-title" style="display: inline-block">Suppliers
+							List</h2>
 						<h2 id="partial-title" style="padding-left: 0.5em;"></h2>
 					</div>
 
@@ -21,63 +21,55 @@
 										<th class="text-center"><input type="checkbox"
 											name="check_all_invoice" id="check_all_invoice" value="1"
 											class="disabled hidden"></th>
-										<th><a class="sort_header" data-value="nomor_transaksi"
-											data-order="" href="#">Nomor</a></th>
-										<th><a class="sort_header" data-value="transaction_date"
-											data-order="" href="#">Tanggal</a></th>
+										<th><a class="sort_header" data-value="no" data-order=""
+											href="#">No.</a></th>
+										<th><a class="sort_header" data-value="supplier-code"
+											data-order="" href="#">Supplier Code</a></th>
+										<th><a class="sort_header" data-value="supplier-name"
+											data-order="" href="#">Supplier Name</a></th>
 										<th class="sort_header"><a class="sort_header"
-											data-value="kode_produk" data-order="" href="#">Kode Produk</a>
-										</th>
-										<th><a class="sort_header" data-value="harga" data-order=""
-											href="#">Harga Beli</a></th>
-										<th><a class="sort_header" data-value="supplier" data-order=""
-											href="#">Supplier</a></th>
-										<th><a class="sort_header" data-value="qty" data-order=""
-											href="#">Qty</a></th>
-										<th><a class="sort_header" data-value="total" data-order=""
-											href="#">Total</a></th>
-
+											data-value="address" data-order="" href="#">Address</a></th>
+										<th><a class="sort_header" data-value="phone" data-order=""
+											href="#">Phone</a></th>
 									</tr>
 								</thead>
 								<tbody>
 								<?php
-        $host = "127.0.0.1";
-        $user = "root";
-        $password = "123456";
-        
-        $cnn = mysqli_connect($host, $user, $password);
-        $sql = "SELECT PURCHASE_DATE, PRODUCT_CODE, PURCHASE_PRICE, SUPPLIER_CODE, QTY, TOTAL_PURCHASE FROM midelsys.M_PURCHASE ";
-        $result = mysqli_query($cnn, $sql);
-        $counter = 1;
-        if ($result == false) {
-            echo "Error: " . mysqli_error($cnn);
-        } else {
-        while ($row = mysqli_fetch_array($result)) {
-            
-            ?>
-                                <tr>
+                                    $host = "127.0.0.1";
+                                    $user = "root";
+                                    $password = "123456";
+                                    
+                                    $cnn = mysqli_connect($host, $user, $password);
+                                    $sql = "SELECT SUPPLIER_CODE, SUPPLIER_NAME, ADDRESS, PHONE_NUMBER FROM midelsys.M_SUPPLIER";
+                                    $result = mysqli_query($cnn, $sql);
+                                    $counter = 1;
+                                    if ($result == false) {
+                                        echo "Error: " . mysqli_error($cnn);
+                                    } else {
+                                    while ($row = mysqli_fetch_array($result)) {
+                                        
+                                 ?>
+									<tr>
 										<td class="text-center"><input type="checkbox"
 											name="check_all_invoice" id="check_all_invoice" value="1"
 											class="disabled hidden"></td>
-											<td><?php echo $counter?></td>
-											<td><?php echo $row['PURCHASE_DATE']?></td>
-										<td><a href="sources/detailproduct.php"><?php echo $row['PRODUCT_CODE']?></a></td>
-										<td><?php echo $row['PURCHASE_PRICE']?></td>
+										<td><?php echo $counter?></td>
 										<td><?php echo $row['SUPPLIER_CODE']?></td>
-										<td><?php echo $row['QTY']?></td>
-										<td><?php echo $row['TOTAL_PURCHASE']?></td>
-										
+										<td><?php echo $row['SUPPLIER_NAME']?></td>
+										<td><?php echo $row['ADDRESS']?></td>
+										<td><?php echo $row['PHONE_NUMBER']?></td>
 									</tr>
-                                <?php
-                            $counter++;    
+								<?php
+            $counter ++;
         }
-        }
+                                    }
         ?>
 								</tbody>
+						
 							</table>
 							<div class="col-sm-6 col-md-6">
-								<a class="btn btn-primary" href="new_purchase.php"> <i
-									class="fa fa-plus"></i> Buat Pembelian Baru
+								<a class="btn btn-primary" href="new_supplier.php"> <i
+									class="fa fa-plus"></i> ADD NEW SUPPLIER
 								</a>
 							</div>
 						</div>

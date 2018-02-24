@@ -1,4 +1,4 @@
-<?php include '../index.php'; ?>
+<?php include 'index.php'; ?>
 
 	<div class="content-wrapper">
 		<div class="container-fluid">
@@ -8,8 +8,7 @@
 					<div class="table-container table-navigation">
 						<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"
 							style="display: flex;">
-							<h2 id="invoice-title" style="display: inline-block">Transaksi
-								Pembelian</h2>
+							<h2 id="invoice-title" style="display: inline-block">Products List</h2>
 							<h2 id="partial-title" style="padding-left: 0.5em;"></h2>
 						</div>
 						
@@ -21,21 +20,22 @@
 										<th class="text-center"><input type="checkbox"
 											name="check_all_invoice" id="check_all_invoice" value="1"
 											class="disabled hidden"></th>
-										<th><a class="sort_header" data-value="nomor_transaksi"
-											data-order="" href="#">Nomor</a></th>											
-										<th><a class="sort_header" data-value="transaction_date"
-											data-order="" href="#">Tanggal</a></th>
-										<th class="sort_header"><a class="sort_header"
-											data-value="kode_produk" data-order="" href="#">Kode Produk</a>
+										<th><a class="sort_header" data-value="no"
+											data-order="" href="#">No.</a></th>											
+										<th><a class="sort_header" data-value="product-code"
+											data-order="" href="#">Product Code</a></th>
+										<th><a class="sort_header"
+											data-value="product-name" data-order="" href="#">Product Name</a>
 										</th>
-										<th><a class="sort_header" data-value="harga"
-											data-order="" href="#">Harga Beli</a></th>
-											<th><a class="sort_header" data-value="supplier"
-											data-order="" href="#">Supplier</a></th>
+										<th class="sort_header"><a class="sort_header"
+											data-value="supplier-code" data-order="" href="#">Supplier Code</a>
+										</th>
+										<th><a class="sort_header" data-value="sale-price"
+											data-order="" href="#">Sale Price</a></th>
 										<th><a class="sort_header" data-value="qty" data-order=""
 											href="#">Qty</a></th>
 										<th><a class="sort_header"
-											data-value="total" data-order="" href="#">Total</a>
+											data-value="notes" data-order="" href="#">Notes</a>
 										</th>
 										
 									</tr>
@@ -44,7 +44,7 @@
 							</table>
 											<div class="col-sm-6 col-md-6">
 					<a class="btn btn-primary" href="/invoices/new"> <i
-						class="fa fa-plus"></i> Buat Penjualan Baru
+						class="fa fa-plus"></i> Tambah Produk Baru
 					</a>
 				</div>
 						</div>

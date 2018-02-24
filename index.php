@@ -3,7 +3,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Cp1252">
 <title>Rahmidel Shop</title>
+ <!-- Bootstrap core JavaScript-->
+    <script src="styles/vendor/jquery/jquery.min.js"></script>
+    <script src="styles/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="styles/vendor/bootstrap/js/bootstrap-select.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="styles/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="styles/vendor/chart.js/Chart.min.js"></script>
+    <script src="styles/vendor/datatables/jquery.dataTables.js"></script>
+    <script src="styles/vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="styles/js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="styles/js/sb-admin-datatables.min.js"></script>
+    <script src="styles/js/sb-admin-charts.min.js"></script>
+
 <link href="styles/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="styles/vendor/bootstrap/css/bootstrap-select.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="styles/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
@@ -14,7 +31,7 @@
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="index.php">Rahmidel Shop</a>
+    <a class="navbar-brand" href="index.php">sdfsfsfs</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,9 +68,9 @@
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Pelanggan">
-          <a class="nav-link" href="pelanggan.php">
+          <a class="nav-link" href="customer.php">
             <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text">Pelanggan</span>
+            <span class="nav-link-text">Customer</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Supplier">
@@ -63,7 +80,7 @@
           </a>
         </li>
          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Produk">
-          <a class="nav-link" href="produk.php">
+          <a class="nav-link" href="product.php">
             <i class="fa fa-fw fa-product-hunt"></i>
             <span class="nav-link-text">Produk</span>
           </a>
@@ -144,20 +161,7 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
-    <script src="js/sb-admin-charts.min.js"></script>
-  </div>
+   
+
   </body>
 </html>
