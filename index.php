@@ -131,8 +131,8 @@
   </nav>
 
 
-<div class="content-wrapper" id="cont">
-	<div class="container-fluid" >
+<div class="content-wrapper" >
+	<div class="container-fluid" id="cont">
 	
 
 <script type="text/javascript">
@@ -151,18 +151,6 @@
 					}
 				}
 };
-
-
-			
-/* 			$.each(allp,function(k,v){
-				switch (v.html().toLowerCase()){
-					case 'supplier' : {
-						//empty divContent
-						divContent.empty();
-						divContent.load('supplier.php') //use ajax to load php path
-					}
-				}
-			}); */
 	}
 </script>
 
